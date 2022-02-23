@@ -1,0 +1,107 @@
+/*
+  Basic styles for links
+*/
+a {
+  @include transition(color);
+  color: $link-color;
+  text-decoration: $link-decoration;
+}
+
+ul,
+ol,
+dl,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+  line-height: 1;
+
+  @include media('>=tablet') {
+    font-size: 80px;
+  }
+}
+
+h2, .h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 40px;
+  }
+}
+
+h3, .h3 {
+  font-size: 20px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 34px;
+  }
+}
+
+h4, .h4 {
+  font-size: 18px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 30px;
+  }
+}
+
+h5, .h5 {
+  font-size: 16px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 20px;
+  }
+}
+
+h6, .h6 {
+  font-size: 14px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 18px;
+  }
+}
+
+p, .p {
+  font-size: 14px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: $primary;
+
+  @include media('>=tablet') {
+    font-size: 30px;
+  }
+
+  a {
+    color: $purple-03;
+
+    &:hover {
+      color: $purple-01;
+    }
+  }
+}

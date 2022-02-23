@@ -1,0 +1,53 @@
+// breakpoint mixins
+
+@mixin media($size) {
+  @if $size == 'xs-phone' {
+    @media (max-width: 320px) { @content; }
+  } @else if $size == '>=phone' {
+    @media (min-width: 400px) { @content; }
+  } @else if $size == '<=phone' {
+    @media (max-width: 400px) { @content; } 
+  } @else if $size == '>=tablet' {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == '<=tablet' {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == '>=lg-tablet' {
+    @media (min-width: 960px) { @content; }
+  } @else if $size == '<=lg-tablet' {
+    @media (max-width: 960px) { @content; }
+  } @else if $size == '>=desktop' {
+    @media (min-width: 1024px) { @content; }
+  } @else if $size == '<=desktop' {
+    @media (max-width: 1024px) { @content; }
+  } @else if $size == '>=md-desktop' {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == '<=md-desktop' {
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == '>=lg-desktop' {
+    @media (min-width: 1190px) { @content; }
+  } @else if $size == '<=lg-desktop' {
+    @media (max-width: 1190px) { @content; }
+  } @else if $size == '>=sm-laptop' {
+    @media (min-width: 1320px) { @content; }
+  } @else if $size == '<=sm-laptop' {
+    @media (max-width: 1320px) { @content; }
+  } @else if $size == '>=laptop' {
+    @media (min-width: 1480px) { @content; }
+  } @else if $size == '<=laptop' {
+    @media (max-width: 1480px) { @content; }
+  } @else if $size == '>=widescreen' {
+    @media (min-width: 1920px) { @content; }
+  } @else if $size == '<=widescreen' {
+    @media (max-width: 1920px) { @content; }
+  }
+}
+
+// transition mixin
+@mixin transition($properties, $duration: $animation-speed, $easing: $transition-duration-base) {
+  $list: ();
+  @each $prop in $properties {
+    $str: #{$prop} #{$duration} #{$easing};
+    $list: join($list, #{$str}, comma);
+  }
+  transition: $list;
+}

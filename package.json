@@ -1,0 +1,22 @@
+{
+  "name": "gulp-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.1",
+    "gulp-clean-css": "^4.3.0",
+    "browser-sync": "*",
+    "browserify": "^17.0.0",
+    "vinyl-source-stream": "^2.0.0",
+    "gulp-to-ico": "^1.0.0",
+    "gulp-imagemin": "7.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+.btn {
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
+  border: 0;
+  padding: 15px 60px;
+  text-align: center;
+
+  &-primary {
+    @include transition(color background-color);
+    color: $primary;
+    background-color: $purple-02;
+
+    &:hover {
+      background-color: $gray-02;
+      color: $purple-03;
+    }
+  }
+
+  &-outline {
+    color: $purple-02;
+    background-color: $dark-01;
+    border: 1px solid $purple-02;
+  }
+}
