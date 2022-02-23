@@ -1,6 +1,6 @@
-# ivan-chebotar-personal-website
+# Personal-website
 
-This is my personal web site. Here, I can show you small part of my knowledge and skills.
+This is my personal website. Here, I can show you small part of my knowledge and skills.
 
 ## How can I deploy this project on my device?
 
