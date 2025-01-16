@@ -1,44 +1,30 @@
 // breakpoint mixins
 
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 375px,
+  'tablet': 768px,
+  'lg-tablet': 960px,
+  'desktop': 1024px,
+  'md-desktop': 1200px,
+  'sm-laptop': 1320px,
+  'laptop': 1480px,
+  'widescreen': 1920px
+);
+
 @mixin media($size) {
-  @if $size == 'xs-phone' {
-    @media (max-width: 320px) { @content; }
-  } @else if $size == '>=phone' {
-    @media (min-width: 400px) { @content; }
-  } @else if $size == '<=phone' {
-    @media (max-width: 400px) { @content; } 
-  } @else if $size == '>=tablet' {
-    @media (min-width: 768px) { @content; }
-  } @else if $size == '<=tablet' {
-    @media (max-width: 768px) { @content; }
-  } @else if $size == '>=lg-tablet' {
-    @media (min-width: 960px) { @content; }
-  } @else if $size == '<=lg-tablet' {
-    @media (max-width: 960px) { @content; }
-  } @else if $size == '>=desktop' {
-    @media (min-width: 1024px) { @content; }
-  } @else if $size == '<=desktop' {
-    @media (max-width: 1024px) { @content; }
-  } @else if $size == '>=md-desktop' {
-    @media (min-width: 1200px) { @content; }
-  } @else if $size == '<=md-desktop' {
-    @media (max-width: 1200px) { @content; }
-  } @else if $size == '>=lg-desktop' {
-    @media (min-width: 1190px) { @content; }
-  } @else if $size == '<=lg-desktop' {
-    @media (max-width: 1190px) { @content; }
-  } @else if $size == '>=sm-laptop' {
-    @media (min-width: 1320px) { @content; }
-  } @else if $size == '<=sm-laptop' {
-    @media (max-width: 1320px) { @content; }
-  } @else if $size == '>=laptop' {
-    @media (min-width: 1480px) { @content; }
-  } @else if $size == '<=laptop' {
-    @media (max-width: 1480px) { @content; }
-  } @else if $size == '>=widescreen' {
-    @media (min-width: 1920px) { @content; }
-  } @else if $size == '<=widescreen' {
-    @media (max-width: 1920px) { @content; }
+  $breakpoint-value: map-get($breakpoints, str-slice($size, 3));
+
+  @if str-index($size, '>=') {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else if str-index($size, '<=') {
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @error "Unknown size: #{$size}. Please use one of the defined breakpoints.";
   }
 }
 

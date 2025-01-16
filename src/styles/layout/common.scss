@@ -25,6 +25,10 @@
   &-sm {
     max-width: 1000px;
   }
+
+  &-fluid {
+    max-width: none;
+  }
 }
 
 .section-title {
@@ -106,19 +110,14 @@
   position: fixed;
   z-index: 2;
   top: 40%;
-  left: -23px;
+  left: -14px;
   display: none;
   transition: all 2s ease;
   opacity: 0;
   transform: translateX(-100px);
 
-  @include media('>=tablet') {
+  @include media('>=desktop') {
     display: block;
-    left: -14px;
-  }
-
-  @include media('>=sm-laptop') {
-    left: 30px;
   }
 
   &.in-viewport {
@@ -358,26 +357,44 @@
 }
 
 .project-post {
-  margin: 0 0 40px;
+  margin: 0 0 60px;
 
   @include media('>=tablet') {
-    margin: 0 0 60px;
+    margin: 0 0 100px;
   }
 
   &-title {
-    text-align: center;
-    margin: 0 0 4px;
+    margin: 0 0 20px;
+
+    a {
+      color: $primary;
+    }
   }
 
   &-sub-title {
-    text-align: center;
     color: $gray-01;
     font-size: 16px;
     max-width: 500px;
-    margin: 0 auto 20px;
+    margin: 0 0 40px;
+    font-weight: $font-weight-light;
 
     @include media('>=tablet') {
-      font-size: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      padding: 6px 10px;
+      color: rgba($primary, 0.5);
+      background-color: $secondary;
+      border-radius: 6px;
+      margin: 0 10px 10px 0;
     }
   }
 }
@@ -392,9 +409,14 @@
 
     @include media('>=tablet') {
       max-height: 500px;
+    }
 
-      img {
-        object-fit: cover;
+    img {
+      min-height: 300px;
+      object-fit: cover;
+      
+      @include media('>=tablet') {
+        min-height: auto;
       }
     }
 
@@ -443,7 +465,9 @@
       opacity: 0;
       position: absolute;
       z-index: 3;
-      top: 48%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       margin: 0 auto;
       display: none;
 
