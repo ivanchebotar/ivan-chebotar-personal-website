@@ -6,8 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <title>Ivan Chebotar - About me</title>
   </head>
   <body class="body">
@@ -21,7 +24,7 @@
         <div class="top-scroll-holder">
           <div class="top-scroll-holder-indicator"></div>
         </div>
-        <div class="container">
+        <div class="container container-fluid">
           <div class="header-group">
             <div class="logo">
               <a href="index.html" class="logo-holder">
@@ -55,19 +58,63 @@
               <span></span>
             </div>
             <div class="works-content">
-              <div class="project-post">
-                <h3 class="project-post-title">ACC app</h3>
-                <p class="project-post-sub-title">A register app that stores your login and password data. (currently doesn't work full)</p>
+              <div class="project-post" id="section2">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/ivancheb-photo" target="_blank">IVNP</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JavaScript</p></li>
+                  <li><p>Gulp.js</p></li>
+                </ul>
+                <p class="project-post-sub-title">multi page website with JS functionality</p>
                 <div class="project-post-card">
-                  <a href="https://ivanchebotar.github.io/acc-app" target="_blank" class="img-holder">
-                    <img src="images/img-card-01.svg" alt="">
+                  <a href="https://ivanchebotar.github.io/ivancheb-photo" target="_blank" class="img-holder">
+                    <img src="images/img-card-10.svg" alt="">
                     <button class="btn btn-outline">visit</button>
                   </a>
                 </div>
               </div>
-              <div class="project-post">
-                <h3 class="project-post-title">Alfred</h3>
-                <p class="project-post-sub-title">An app that can help you to orader your list.</p>
+              <div class="project-post" id="section3">
+                <h3 class="project-post-title"><a href="error-page.html">MovieSphere</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>Vue.js</p></li>
+                  <li><p>SPA</p></li>
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                </ul>
+                <p class="project-post-sub-title">movie search web app</p>
+                <div class="project-post-card">
+                  <a href="error-page.html" target="_blank" class="img-holder">
+                    <img src="images/img-card-11.svg" alt="">
+                    <button class="btn btn-outline">visit</button>
+                  </a>
+                </div>
+              </div>
+              <div class="project-post" id="section4">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/anywhere." target="_blank">Anywhere.</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JavaScript</p></li>
+                  <li><p>Webpack</p></li>
+                </ul>
+                <p class="project-post-sub-title">multi page website with JS functionality</p>
+                <div class="project-post-card">
+                  <a href="https://ivanchebotar.github.io/anywhere." target="_blank" class="img-holder">
+                    <img src="images/img-card-12.svg" alt="">
+                    <button class="btn btn-outline">visit</button>
+                  </a>
+                </div>
+              </div>
+              <div class="project-post" id="section5">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/alfred-app/" target="_blank">Alfred</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JS</p></li>
+                  <li><p>Local Storage</p></li>
+                </ul>
+                <p class="project-post-sub-title">web app that helps you to orader your to do list</p>
                 <div class="project-post-card">
                   <a href="https://ivanchebotar.github.io/alfred-app/" target="_blank" class="img-holder">
                     <img src="images/img-card-04.svg" alt="">
@@ -75,27 +122,16 @@
                   </a>
                 </div>
               </div>
-              <div class="project-post">
-                <h3 class="project-post-title">Travel Guide</h3>
-                <p class="project-post-sub-title">Simple landing page</p>
-                <div class="project-post-card">
-                  <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder">
-                    <img src="images/img-card-03.png" alt="">
-                    <button class="btn btn-outline">visit</button>
-                  </a>
-                  <div class="project-post-card-split">
-                    <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder sm">
-                      <img src="images/img-card-04.png" alt="">
-                    </a>
-                    <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder sm">
-                      <img src="images/img-card-05.png" alt="">
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-post">
-                <h3 class="project-post-title">line</h3>
-                <p class="project-post-sub-title">An app that works like paint.</p>
+              <div class="project-post" id="section6">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/line" target="_blank">line</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JS</p></li>
+                  <li><p>Local Storage</p></li>
+                  <li><p>Gulp.js</p></li>
+                </ul>
+                <p class="project-post-sub-title">drawing web app</p>
                 <div class="project-post-card">
                   <a href="https://ivanchebotar.github.io/line" target="_blank" class="img-holder">
                     <img src="images/img-card-09.svg" alt="">
@@ -103,20 +139,43 @@
                   </a>
                 </div>
               </div>
-              <div class="project-post">
-                <h3 class="project-post-title">Comfy cinema</h3>
-                <p class="project-post-sub-title">This app works like cinema page prototype (with leave serch and dynamically generated films)</p>
+              <div class="project-post" id="section7">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/acc-app" target="_blank">ACC app</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JS</p></li>
+                  <li><p>Local Storage</p></li>
+                  <li><p>Webpack</p></li>
+                </ul>
+                <p class="project-post-sub-title">web app that stores your login and password data</p>
                 <div class="project-post-card">
-                  <a href="error-page.html" class="img-holder">
-                    <img src="images/img-card-06.png" alt="">
+                  <a href="https://ivanchebotar.github.io/acc-app" target="_blank" class="img-holder">
+                    <img src="images/img-card-01.svg" alt="">
+                    <button class="btn btn-outline">visit</button>
+                  </a>
+                </div>
+              </div>
+              <div class="project-post" id="section4">
+                <h3 class="project-post-title"><a href="https://ivanchebotar.github.io/travel-guide/" target="_blank">Travel Guide</a></h3>
+                <ul class="project-post-tabs">
+                  <li><p>HTML</p></li>
+                  <li><p>SCSS</p></li>
+                  <li><p>JS</p></li>
+                  <li><p>Webpack</p></li>
+                </ul>
+                <p class="project-post-sub-title">landing page</p>
+                <div class="project-post-card">
+                  <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder">
+                    <img src="images/img-card-03.webp" alt="">
                     <button class="btn btn-outline">visit</button>
                   </a>
                   <div class="project-post-card-split">
-                    <a href="error-page.html" class="img-holder sm">
-                      <img src="images/img-card-07.png" alt="">
+                    <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder sm">
+                      <img src="images/img-card-04.webp" alt="">
                     </a>
-                    <a href="error-page.html" class="img-holder sm">
-                      <img src="images/img-card-08.png" alt="">
+                    <a href="https://ivanchebotar.github.io/travel-guide/" target="_blank" class="img-holder sm">
+                      <img src="images/img-card-05.webp" alt="">
                     </a>
                   </div>
                 </div>
@@ -126,7 +185,7 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container">
+        <div class="container container-fluid">
           <div class="footer-content">
             <div class="footer-content-left">
               <div class="footer-content-left-description">
@@ -141,7 +200,7 @@
                 </div>
                 <div class="description-icon">
                   <div class="img-holder">
-                    <img src="images/personal-icon-4.png" alt="memoji like">
+                    <img src="images/personal-icon-4.webp" alt="memoji like">
                   </div>
                 </div>
               </div>
@@ -162,7 +221,7 @@
               </ul>
             </div>
           </div>
-          <h6 class="copyright">© 2022 All rights reserved</h6>
+          <h6 class="copyright"><span id="year"></span> Ivan Chebotrar</h6>
         </div>
       </footer>
     </div>
